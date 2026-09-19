@@ -15,4 +15,4 @@ A sleek, responsive, and modern To-Do List application inspired by the iOS aesth
 - **Vanilla JavaScript** (DOM Manipulation, LocalStorage, BOM)
 
 ## 🚀 Live Demo
-[View Live Project](https://ganat1337.github.io/to-do-list/)
+[View Live Project](https://ganat1337.github.io/To-Do-List-V2/)
