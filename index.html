@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To DO List</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+      <!-- Color Switcher -->
+      <div class="color-switcher">
+        <span class="color-btn" data-color="#8a2be2" style="background: #8a2be2"></span>
+        <span class="color-btn" data-color="#00d2ff" style="background: #00d2ff"></span>
+        <span class="color-btn" data-color="#ff2a6d" style="background: #ff2a6d"></span>
+        <span class="color-btn" data-color="#ff80bf" style="background: #ff80bf"></span>
+        <span class="color-btn" data-color="#cd7f32" style="background: #cd7f32"></span>
+      </div>
+
+      <h2>To-Do List</h2>
+
+      <!-- Form Input -->
+      <form id="form">
+        <input type="text" id="task-input" placeholder="Enter a new task..." />
+        <button type="submit" class="add-btn">Add Task</button>
+      </form>
+
+      <!-- Counter -->
+      <div id="counter">Tasks: 0</div>
+
+      <!-- Tasks List -->
+      <ul id="tasks-list"></ul>
+
+      <!-- Clear All -->
+      <button type="button" class="clear-btn">Clear All</button>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

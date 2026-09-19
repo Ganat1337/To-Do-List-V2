@@ -1,0 +1,235 @@
+:root {
+  --primary-color: #8a2be2;
+  --bg-color: #0d0f12;
+  --card-bg: #16181d;
+  --text-color: #f1f1f1;
+  --border-color: #2a2d35;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 18px;
+    border-radius: 16px;
+  }
+}
+
+.container {
+  background: var(--card-bg);
+  width: 100%;
+  max-width: 420px;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--border-color);
+  position: relative;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* Color Switcher */
+.color-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.color-btn {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 2px solid var(--card-bg);
+}
+
+.color-btn:hover {
+  transform: scale(1.2);
+}
+
+.color-btn.active {
+  box-shadow: 0 0 10px var(--primary-color);
+  transform: scale(1.2);
+}
+
+/* Form */
+@media (max-width: 380px) {
+  form {
+    flex-direction: column; 
+  }
+  
+  .add-btn {
+    width: 100%; 
+  }
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  padding: 12px 16px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: var(--primary-color);
+}
+
+.add-btn {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  box-shadow: 0 0 15px var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* Counter */
+#counter {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Tasks List */
+ul {
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+ul li {
+  background: var(--bg-color);
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+ul li:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Checkbox Circle (iOS Style) */
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #555;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+ul li.completed .checkbox {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px var(--primary-color);
+}
+
+ul li.completed .checkbox::after {
+  content: "✓";
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+ul li .task-content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+ul li.completed span.text {
+  text-decoration: line-through;
+  color: #666;
+}
+
+ul li .task-content span.text {
+    word-break: break-word;
+    overflow: hidden;
+}
+
+/* Delete Button */
+.del {
+  background: rgba(255, 59, 48, 0.15);
+  color: #ff3b30;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.del:hover {
+  background: #ff3b30;
+  color: #fff;
+}
+
+/* Clear All Button */
+.clear-btn {
+  width: 100%;
+  background: transparent;
+  color: #888;
+  border: 1px dashed var(--border-color);
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.clear-btn:hover {
+  border-color: #ff3b30;
+  color: #ff3b30;
+}
+
